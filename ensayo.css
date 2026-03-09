@@ -7,7 +7,7 @@
 /* menú izquierdo */
 .menu-ensayo {
   width: 240px;
-  background: #e6f4fb;
+  background: #e2177EB;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -21,7 +21,7 @@
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
-  color: #1f4e8c;
+  color: #ffffff;
 }
 
 .menu-ensayo button:hover {
@@ -111,3 +111,4 @@
 
   scroll-margin-top: 120px;      /* compensa header fijo */
 }
+
