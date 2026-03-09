@@ -18,7 +18,7 @@
   background: none;
   border: none;
   text-align: left;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 500;
   cursor: pointer;
   color: #ffffff;
@@ -111,6 +111,7 @@
 
   scroll-margin-top: 120px;      /* compensa header fijo */
 }
+
 
 
 
