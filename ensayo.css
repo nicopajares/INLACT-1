@@ -7,7 +7,7 @@
 /* menú izquierdo */
 .menu-ensayo {
   width: 240px;
-  background: #e2177EB;
+  background: #3A66F0;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -111,4 +111,5 @@
 
   scroll-margin-top: 120px;      /* compensa header fijo */
 }
+
 
