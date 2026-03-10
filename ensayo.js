@@ -44,6 +44,15 @@ document.getElementById("fecha").textContent =
     : "";
 
 /* SECCIONES */
+const titulos = {
+  propuesta: "Propuesta",
+  dosis: "Dosis",
+  elaboracion: "Elaboración",
+  resultados: "Resultados",
+  conclusion: "Conclusión",
+  propuestacomercial: "Propuesta comercial",
+  fotos: "Imágenes"
+};
 const secciones = {
   propuesta: e.propuesta,
   dosis: e.dosis,
