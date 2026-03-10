@@ -43,7 +43,7 @@ document.getElementById("fecha").textContent =
     ? e.fecha.toDate().toLocaleDateString("es-AR")
     : "";
 
-/* TITULOS LEGIBLES */
+/* TITULOS */
 const titulos = {
   propuesta: "Propuesta",
   dosis: "Dosis",
@@ -54,6 +54,15 @@ const titulos = {
   fotos: "Imágenes"
 };
 
+/* FOTOS (sin templates anidados) */
+let fotosHTML = "<p>No hay imágenes</p>";
+if (e.fotos && e.fotos.length) {
+  fotosHTML =
+    '<div class="fotos">' +
+    e.fotos.map(f => `<img src="${f}">`).join("") +
+    "</div>";
+}
+
 /* SECCIONES */
 const secciones = {
   propuesta: e.propuesta,
@@ -61,13 +70,11 @@ const secciones = {
   elaboracion: e.elaboracion,
   resultados: e.resultados,
   conclusion: e.conclusion,
-  propuestacomercial: e.propuestaComercial, // ✅ CORREGIDO
-  fotos: e.fotos && e.fotos.length
-    ? `<div class="fotos">${e.fotos.map(f => `<img src="${f}">`).join("")}</div>`
-    : "<p>No hay imágenes</p>"
+  propuestacomercial: e.propuestaComercial,
+  fotos: fotosHTML
 };
 
-/* CARGAR CONTENIDO EN CADA BLOQUE */
+/* CARGAR CONTENIDO */
 Object.entries(secciones).forEach(([id, contenido]) => {
   const bloque = document.getElementById(id);
   if (!bloque) return;
