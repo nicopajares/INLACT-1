@@ -43,7 +43,7 @@ document.getElementById("fecha").textContent =
     ? e.fecha.toDate().toLocaleDateString("es-AR")
     : "";
 
-/* SECCIONES */
+/* TITULOS LEGIBLES */
 const titulos = {
   propuesta: "Propuesta",
   dosis: "Dosis",
@@ -53,13 +53,15 @@ const titulos = {
   propuestacomercial: "Propuesta comercial",
   fotos: "Imágenes"
 };
+
+/* SECCIONES */
 const secciones = {
   propuesta: e.propuesta,
   dosis: e.dosis,
   elaboracion: e.elaboracion,
   resultados: e.resultados,
   conclusion: e.conclusion,
-  propuestacomercial: e."Propuesta Comercial",
+  propuestacomercial: e.propuestaComercial, // ✅ CORREGIDO
   fotos: e.fotos && e.fotos.length
     ? `<div class="fotos">${e.fotos.map(f => `<img src="${f}">`).join("")}</div>`
     : "<p>No hay imágenes</p>"
@@ -75,7 +77,8 @@ Object.entries(secciones).forEach(([id, contenido]) => {
     ${contenido ? `<p>${contenido}</p>` : "<p>No hay información</p>"}
   `;
 });
-/* BOTONES → SCROLL AMPLIO */
+
+/* BOTONES → SCROLL */
 document.querySelectorAll(".menu-ensayo button").forEach(btn => {
   btn.addEventListener("click", () => {
     const destino = document.getElementById(btn.dataset.seccion);
