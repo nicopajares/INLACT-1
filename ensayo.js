@@ -62,11 +62,10 @@ Object.entries(secciones).forEach(([id, contenido]) => {
   if (!bloque) return;
 
   bloque.innerHTML = `
-    <h3>${id.charAt(0).toUpperCase() + id.slice(1)}</h3>
+    <h3>${titulos[id] || id}</h3>
     ${contenido ? `<p>${contenido}</p>` : "<p>No hay información</p>"}
   `;
 });
-
 /* BOTONES → SCROLL AMPLIO */
 document.querySelectorAll(".menu-ensayo button").forEach(btn => {
   btn.addEventListener("click", () => {
