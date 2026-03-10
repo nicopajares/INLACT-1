@@ -50,7 +50,7 @@ const titulos = {
   elaboracion: "Elaboración",
   resultados: "Resultados",
   conclusion: "Conclusión",
-  propuestacomercial: "Propuesta comercial",
+  propuestacomercial: "Propuesta Comercial",
   fotos: "Imágenes"
 };
 
