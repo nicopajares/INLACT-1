@@ -50,7 +50,7 @@ const secciones = {
   elaboracion: e.elaboracion,
   resultados: e.resultados,
   conclusion: e.conclusion,
-  comercial: e.propuestaComercial,
+  propuestacomercial: e.propuestaComercial,
   fotos: e.fotos && e.fotos.length
     ? `<div class="fotos">${e.fotos.map(f => `<img src="${f}">`).join("")}</div>`
     : "<p>No hay imágenes</p>"
